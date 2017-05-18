@@ -15,6 +15,9 @@ Ship.prototype.setAlive = function () {
         this.alive = false;
     }
 };
+Ship.prototype.getRotation = function(){
+    return this.rotation;
+}
 //повороты корабля при расстановке
 Ship.prototype.rotate = function (rotation) {
     this.rotation = rotation;

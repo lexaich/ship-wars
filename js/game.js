@@ -6,7 +6,7 @@ this.players = [];
 };
 // запускаем игру
 Game.prototype.start = function () {
-    this.setCurrentPlayer();
+    this.setCurrentPlayer(); //переключатель игрока
 };
 
 // выставляем игрока кторый ходит
