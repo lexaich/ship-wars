@@ -7,19 +7,19 @@ function Player(n){
     // создание кораблей
 var k = 0;
     for(var i=1;i<=4;i++){
-        this.ships.push(new Ship(1));
-        document.write('<div id="ship" class="oneShip" style="width:28px; height:28px; border:1px solid; cursor:pointer; margin-bottom: 5px" onclick="select('+k++ +')"></div>');
+        this.ships.push(new Ship(1,k));
+        $('#ships').append('<div id="oneShip" class="ship" num="'+k++ +'"></div>');
     };
     for(var i=1;i<=3;i++){
-        this.ships.push(new Ship(2));
-        document.write('<div id="ship" class="twoShip" style="width:28px; height:56px; border:1px solid; cursor:pointer; margin-bottom: 5px" onclick="select('+k++ +')"></div>');
+        this.ships.push(new Ship(2,k));
+        $('#ships').append('<div id="twoShip" class="ship" num="'+k++ +'"></div>');
     };
     for(var i=1;i<=2;i++){
-        this.ships.push(new Ship(3));
-        document.write('<div id="ship" class="threeShip" style="width:28px; height:84px; border:1px solid; cursor:pointer; margin-bottom: 5px" onclick="select('+k++ +')"></div>');
+        this.ships.push(new Ship(3,k));
+        $('#ships').append('<div id="threeShip" class="ship" num="'+k++ +'"></div>');
     };
-        this.ships.push(new Ship(4));
-    document.write('<div id="ship" class="fourShip" style="width:28px; height:112px; border:1px solid; cursor:pointer; margin-bottom: 5px" onclick="select('+k++ +')"></div>');
+        this.ships.push(new Ship(4,k));
+    $('#ships').append('<div id="fourShip" class="ship" num="'+k++ +'"></div>');
 
     
 this.selectedShip = {};

@@ -4,6 +4,26 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style>
+	.ship{
+	width:28px;
+	border:1px solid;
+	cursor:pointer;
+	margin-bottom: 5px;
+	background-color: #433E44;
+	}
+#oneShip{
+	height:28px;
+}
+#twoShip{
+ 	height:56px; 
+}
+#threeShip{
+ 	height:84px;
+}
+#fourShip{
+	height:112px;
+}
+
 .cell{
 display:block;
  cursor:pointer; 
@@ -12,30 +32,77 @@ display:block;
  border:1px solid; 
  height:30px;
   width:30px;
+  background-color: #275FDE;
 }
 .gameArea{
-
-	width:330px; 
+position: absolute;
+left:200px;
+top:200px;
+	width:340px; 
 	height:315px;
 }
-
+.placed{
+display:block;
+ cursor:pointer; 
+ float:left; 
+ margin-right:1px; 
+ border:1px solid; 
+ height:30px;
+  width:30px;
+	background-color: #433E44;
+/*	border-radius:5px;*/
+}
+.shooted{
+display:block;
+ cursor:pointer; 
+ float:left; 
+ margin-right:1px; 
+ border:1px solid; 
+ height:30px;
+  width:30px;
+	background-color: #607D8B;
+	border-radius:5px;
+}
+.killed{
+display:block;
+ cursor:pointer; 
+ float:left; 
+ margin-right:1px; 
+ border:1px solid; 
+ height:30px;
+  width:30px;
+	background-color: #F44336;
+	border-radius:5px;
+}
+span{
+	font-size:25px;
+	margin-right:20px;
+	cursor:pointer;
+	color:blue;
+}
+#rotate{
+	position: absolute;
+	left: 210px;
+	top: 600px;
+}
 </style>
 </head>
 <body>
-
+<button onclick="start()">Start game</button>
+<div id="ships"></div>
+<div id="rotate"></div>
 <script src="js/jquery-3.1.1.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 	<script src="js/cell.js"></script>
 	<script src="js/game.js"></script>
 	<script src="js/rules.js"></script>
 	<script src="js/game_area.js"></script>
 	<script src="js/ship.js"></script>
 	<script src="js/player.js"></script>
-	
-	<script src="js/main.js"></script>
 
-<div class="gameArea">
-	
-</div>
+<div class="wrap"><div class="gameArea"></div></div>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>

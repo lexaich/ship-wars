@@ -1,9 +1,10 @@
 // генерация кораблей по их длинне
 
-function Ship(n){
+function Ship(n,k){
 	this.alive = true;
 	this.length = n;
     this.rotation = 'right';
+    this.num = k;
 };
 //возвращение значения жив ли корабль
 Ship.prototype.checkAlive = function () {
@@ -31,7 +32,7 @@ Ship.prototype.rotate = function (rotation) {
         case 'up':
 // поворот вверх i-- j
             break;
-        default:
+        default:'right'
 //поворот вправро  i j++
     }
 };

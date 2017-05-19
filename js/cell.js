@@ -1,9 +1,12 @@
 // клетка. знает что на ней есть или нет корабля(куска корабля) и стреляли в нее или нет. знает координаты свои
 // умеет проверять свои значения и устанавливать их
+//состояния клетки cell(по умолчанию пустая клетка) placed(имеет поставленный корабль) 
+// shooted( пустая в которую стреляли) killed( убитый корабль или часть корабля)
 function Cell(){
 	this.ship = false;
 	this.shooted = false;
 	this.coordinats = [];
+	this.className = "cell";
 };
 //установка координат этой клетки
 Cell.prototype.setCoordinats = function (i,j) {
@@ -20,6 +23,7 @@ Cell.prototype.checkShip = function() {
 //установление корабля в клетку
 Cell.prototype.setShip = function(){
 	this.ship = true;
+	$(this).attr('class', 'placed');
 };
 //проверка был ли произведен выстре на клетку
 Cell.prototype.checkSoot = function() {
