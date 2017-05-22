@@ -3,7 +3,7 @@
 function Ship(n,k){
 	this.alive = true;
 	this.length = n;
-    this.rotation = 'right';
+    this.rotation = 'up';
     this.num = k;
 };
 //возвращение значения жив ли корабль
@@ -22,17 +22,4 @@ Ship.prototype.getRotation = function(){
 //повороты корабля при расстановке
 Ship.prototype.rotate = function (rotation) {
     this.rotation = rotation;
-    switch(this.rotation){
-        case 'down':
-// поворот вниз    i++  j
-            break;
-        case 'left':
-//поворот влево i j--
-            break;
-        case 'up':
-// поворот вверх i-- j
-            break;
-        default:'right'
-//поворот вправро  i j++
-    }
-};
+ };
