@@ -3,7 +3,7 @@
 function Ship(n,k){
 	this.alive = true;
 	this.length = n;
-    this.rotation = 'up';
+    this.rotation = 0;
     this.num = k;
 };
 //возвращение значения жив ли корабль
@@ -19,7 +19,3 @@ Ship.prototype.setAlive = function () {
 Ship.prototype.getRotation = function(){
     return this.rotation;
 }
-//повороты корабля при расстановке
-Ship.prototype.rotate = function (rotation) {
-    this.rotation = rotation;
- };

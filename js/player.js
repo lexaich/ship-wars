@@ -8,18 +8,18 @@ function Player(n){
 var k = 0;
     for(var i=1;i<=4;i++){
         this.ships.push(new Ship(1,k));
-        $('#ships').append('<div id="oneShip" class="ship" num="'+k++ +'"></div>');
+        $('#ships').append('<div id="oneShip" class="ship" num="'+k++ +'">1</div>');
     };
     for(var i=1;i<=3;i++){
         this.ships.push(new Ship(2,k));
-        $('#ships').append('<div id="twoShip" class="ship" num="'+k++ +'"></div>');
+        $('#ships').append('<div id="twoShip" class="ship" num="'+k++ +'">2</div>');
     };
     for(var i=1;i<=2;i++){
         this.ships.push(new Ship(3,k));
-        $('#ships').append('<div id="threeShip" class="ship" num="'+k++ +'"></div>');
+        $('#ships').append('<div id="threeShip" class="ship" num="'+k++ +'">3</div>');
     };
         this.ships.push(new Ship(4,k));
-    $('#ships').append('<div id="fourShip" class="ship" num="'+k++ +'"></div>');
+    $('#ships').append('<div id="fourShip" class="ship" num="'+k++ +'">4</div>');
 
     
 this.selectedShip = {};
