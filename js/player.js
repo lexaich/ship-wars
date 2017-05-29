@@ -49,10 +49,10 @@ this.selectedShip = {};
 // поставить корабль. если длина корабля не единциа, то ставим его на дальнейшие клетки согласно его длинне. 
 // полчаем корабль и координаты нажатой клетки.
 Player.prototype.place = function(ship,i,j){
-    gameArea[i][j].getCoordinats();
+    gameArea.area[i][j].getCoordinats();
     if(ship.length != 1){
         for(var k=1;k<=ship.length;k++){
-            gameArea[i][j++].setShip();
+            gameArea.area[i][j++].setShip();
         }
     }
 

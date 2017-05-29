@@ -7,6 +7,7 @@ function Cell(){
 	this.shooted = false;
 	this.coordinats = [];
 	this.className = "cell";
+	this.blocked = false;
 };
 //установка координат этой клетки
 Cell.prototype.setCoordinats = function (i,j) {
@@ -24,6 +25,10 @@ Cell.prototype.checkShip = function() {
 Cell.prototype.setShip = function(){
 	this.ship = true;
 	$(this).attr('class', 'placed');
+};
+Cell.prototype.unSetShip = function(){
+	this.ship = false;
+	$(this).attr('class', 'cell');
 };
 //проверка был ли произведен выстре на клетку
 Cell.prototype.checkSoot = function() {
